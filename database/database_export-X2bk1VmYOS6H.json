@@ -2,89 +2,89 @@
     "_id": "01",
     "author": "生命科技",
     "category": "科技",
-    "detail": "新闻详情",
     "title": "《细胞》子刊：问世间情为何物？神经生物学家：多巴胺",
-    "path": "图片路径",
+    "path": "cloud://information-1ggxsb6kb9c06827.696e-information-1ggxsb6kb9c06827-1323855695/news01.jpg",
     "isLike": true,
-    "isCollect": true
+    "isCollect": true,
+    "time": "2024-01-19"
 }
 {
     "_id": "02",
-    "author": "作者1",
+    "author": "地产界",
     "category": "财经",
-    "detail": "详情",
-    "path": "图片路径",
-    "title": "标题",
+    "path": "cloud://information-1ggxsb6kb9c06827.696e-information-1ggxsb6kb9c06827-1323855695/news02.jpg",
+    "title": "保利发展：去年净利润约120亿元，2023-2025年分红比例不低于40%",
     "isLike": false,
-    "isCollect": false
+    "isCollect": false,
+    "time": "2024-01-20"
 }
 {
     "_id": "03",
-    "author": "作者1",
-    "category": "财经",
-    "detail": "新闻详情",
-    "title": "标题",
-    "path": "图片路径",
+    "author": "中国政库",
+    "category": "时事",
+    "title": "中组部划拨3.18亿元用于支持开展党员教育培训等工作",
+    "path": "cloud://information-1ggxsb6kb9c06827.696e-information-1ggxsb6kb9c06827-1323855695/news03.jpg",
     "isLike": false,
-    "isCollect": false
+    "isCollect": false,
+    "time": "2024-01-20"
 }
 {
     "_id": "04",
-    "title": "标题",
-    "author": "作者1",
-    "category": "财经",
-    "detail": "新闻详情",
-    "path": "图片路径",
+    "title": "伊朗海军向公海派遣军舰舰队",
+    "author": "全球速报",
+    "category": "国际",
+    "path": "cloud://information-1ggxsb6kb9c06827.696e-information-1ggxsb6kb9c06827-1323855695/news04.jpg",
     "isLike": false,
-    "isCollect": false
+    "isCollect": false,
+    "time": "2024-01-20"
 }
 {
     "_id": "05",
-    "author": "作者1",
-    "category": "财经",
-    "detail": "新闻详情",
-    "title": "标题",
-    "path": "图片路径",
+    "author": "大国外交",
+    "category": "国际",
+    "title": "王毅：中巴将携手打造双边关系下一个“黄金50年”",
+    "path": "cloud://information-1ggxsb6kb9c06827.696e-information-1ggxsb6kb9c06827-1323855695/news05.jpg",
+    "time": "2024-01-20",
     "isLike": false,
     "isCollect": false
 }
 {
     "_id": "06",
-    "author": "作者1",
-    "category": "财经",
-    "detail": "新闻详情",
-    "title": "标题",
-    "path": "图片路径",
+    "author": "运动家",
+    "category": "体育",
+    "title": "国足队员：信心有提升，希望能出线",
+    "path": "cloud://information-1ggxsb6kb9c06827.696e-information-1ggxsb6kb9c06827-1323855695/news06.jpg",
+    "time":"2024-01-19",
     "isLike": false,
     "isCollect": false
 }
 {
     "_id": "07",
-    "author": "作者1",
-    "category": "财经",
-    "detail": "新闻详情",
-    "title": "标题",
-    "path": "图片路径",
+    "author": "赢家",
+    "category": "游戏",
+    "title": "对话｜Fly加盟济南RW侠，电竞老兵还有一个“亚运梦”",
+    "time": "2024-01-19",
+    "path": "cloud://information-1ggxsb6kb9c06827.696e-information-1ggxsb6kb9c06827-1323855695/news07.jpg",
     "isLike": false,
     "isCollect": false
 }
 {
     "_id": "08",
-    "detail": "新闻详情",
-    "title": "标题",
-    "author": "作者1",
-    "category": "财经",
-    "path": "图片路径",
+    "title": "新剧丨《要久久爱》定档1月20日，杨紫、范丞丞主演",
+    "author": "有戏",
+    "category": "娱乐",
+    "path": "cloud://information-1ggxsb6kb9c06827.696e-information-1ggxsb6kb9c06827-1323855695/news08.jpg",
+    "time": "2024-01-18",
     "isLike": false,
     "isCollect": false
 }
 {
     "_id": "09",
-    "author": "作者1",
-    "category": "财经",
-    "detail": "新闻详情",
-    "title": "标题",
-    "path": "图片路径",
+    "author": "游戏",
+    "category": "娱乐",
+    "title": "媒体：今年春节档，为啥被贾玲、沈腾等“霸占”了？",
+    "time": "2024-01-18",
+    "path": "cloud://information-1ggxsb6kb9c06827.696e-information-1ggxsb6kb9c06827-1323855695/news09.jpg",
     "isLike": false,
     "isCollect": false
 }

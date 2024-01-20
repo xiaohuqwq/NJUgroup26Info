@@ -2,7 +2,13 @@
 const db = wx.cloud.database()
 const datacollection=db.collection("news")
 Page({
-
+  cardtap:function(e){
+    // console.log(e)
+    var news_id=e.currentTarget.dataset.news_id;
+    wx.navigateTo({
+      url: '/pages/detailPage/detailPage?news_id='+news_id,
+    })
+  },
 	data: {
     imgList:[],		///定一个接受数据的数组
   	},

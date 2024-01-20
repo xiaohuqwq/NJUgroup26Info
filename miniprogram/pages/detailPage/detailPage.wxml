@@ -1,2 +1,3 @@
 <!--pages/detailPage/detailPage.wxml-->
 <text>pages/detailPage/detailPage.wxml</text>
+<view>{{id}}</view>

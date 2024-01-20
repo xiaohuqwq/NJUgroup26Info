@@ -1,49 +1,46 @@
 <!--pages/home.wxml-->
-<swiper class="Daily-recommendations" indicator-dots circular style="width: 750rpx; height: 383rpx; display: block; box-sizing: border-box">
+<swiper class="Daily-recommendations" indicator-dots circular indicator-active-color="white">
   <swiper-item>
-    <image class="img1" src="{{imgList[0].path}}" style="width: 750rpx; height: 383rpx; display: inline-block; box-sizing: border-box"></image>
-    <text></text>
+    <view>
+      <navigator url="/pages/detailPage/detailPage?news_id=0">
+        <image class="img1"  style="width: 100%; height: 150px;" src="{{imgList[0].path}}" bind:tap="imagetap"></image> 
+      </navigator>
+    </view>
   </swiper-item>
   <swiper-item>
-    <image class="img1" src="{{imgList[2].path}}"></image>
+    <view>
+      <navigator url="/pages/detailPage/detailPage?news_id=4">
+        <image class="img1"  style="width: 100%; height: 130px;" src="{{imgList[4].path}}" bind:tap="imagetap"></image> 
+      </navigator>
+    </view>
   </swiper-item>
   <swiper-item>
-    <image class="img1" src="{{imgList[4].path}}"></image> 
+    <view>
+      <navigator url="/pages/detailPage/detailPage?news_id=2">
+        <image class="img1"  style="width: 100%; height: 130px;" src="{{imgList[2].path}}" bind:tap="imagetap"></image> 
+      </navigator>
+    </view>
   </swiper-item>
   <swiper-item>
-    <image class="img1" src="{{imgList[6].path}}"></image> 
+    <view>
+      <navigator url="/pages/detailPage/detailPage?news_id=6">
+        <image class="img1"  style="width: 100%; height: 130px;" src="{{imgList[6].path}}" bind:tap="imagetap"></image> 
+      </navigator>
+    </view>
   </swiper-item>
 </swiper>
 <view style="margin-top:5px;"></view>
-<!-- <scroll-view class="container" scroll-y="true">
-  <view style="margin-top: 20px;"></view>
-  <view class="card">
-    <text>这里是文字内容，可以输入文本、描述等内容。</text>
-        <image class="img2"></image>
-  </view>
-  <view style="margin-top: 10px;"></view>
-  <view class="card">
-    <text>这里是文字内容，可以输入文本、描述等内容。</text>
-        <image class="img2"></image>
-  </view>
-  <view style="margin-top: 10px;"></view>
-  <view class="card">
-    <text>这里是文字内容，可以输入文本、描述等内容。</text>
-        <image class="img2"></image>  
-  </view>
-  <view style="margin-top: 10px;"></view>
-  <view class="card">
-    <text>这里是文字内容，可以输入文本、描述等内容。</text>
-        <image class="img2"></image>  
-  </view>
-</scroll-view> -->
-<scroll-view class="container" scroll-y="true" style="position: relative; left: -1rpx; top: 0rpx">
+<scroll-view class="container" scroll-y="true">
   <view wx:for="{{imgList}}">
     <view style="margin-top: 10px;"></view>
-    <view class="card" style="width: 690rpx; height: 186rpx; display: flex; box-sizing: border-box">	
-      <textarea class="newstext">{{item.title}}</textarea>
-      <image class="img2" src="{{item.path}}" style="width: 223rpx; height: 150rpx; display: block; box-sizing: border-box"></image>
+    <navigator url="'/pages/detailPage/detailPage'">
+        <view class="card" bind:tap="cardtap" data-news_id="{{item._id}}">	
+        <textarea class="newstext" disabled>{{item.title}}</textarea>
+      <image class="img2" src="{{item.path}}"></image>
     </view>
+    </navigator>
+
+
   </view>
 </scroll-view>
 
