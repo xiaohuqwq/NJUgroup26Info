@@ -1,26 +1,23 @@
 // pages/home.js
-
+const db = wx.cloud.database()
+const datacollection=db.collection("news")
 Page({
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad(options) {
-    const db = wx.cloud.database()
-    const todo = db.collection('news').doc('01').get({
-      success: function(res){
-        console.log(res.data)
+	data: {
+    imgList:[],		///定一个接受数据的数组
+  	},
+  	onLoad: function (options) {  // 页面初始化 options为页面跳转所带来的参数
+    let that=this //异步请求，所以let一个that
+   
+    wx.cloud.database().collection("news").limit(10).get({ 
+      success(res){       
+        that.setData({ //通过setData，将res中的数据存入到imgList数组当中
+          imgList:res.data           
+        }),
+        console.log(imgList.data)   ///打印看一下   
       }
     })
-  },
-
+},
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

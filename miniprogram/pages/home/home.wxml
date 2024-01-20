@@ -1,2 +1,51 @@
 <!--pages/home.wxml-->
-<text>pages/home.wxml</text>
+<swiper class="Daily-recommendations" indicator-dots circular style="width: 750rpx; height: 383rpx; display: block; box-sizing: border-box">
+  <swiper-item>
+    <image class="img1" src="{{imgList[0].path}}" style="width: 750rpx; height: 383rpx; display: inline-block; box-sizing: border-box"></image>
+    <text></text>
+  </swiper-item>
+  <swiper-item>
+    <image class="img1" src="{{imgList[2].path}}"></image>
+  </swiper-item>
+  <swiper-item>
+    <image class="img1" src="{{imgList[4].path}}"></image> 
+  </swiper-item>
+  <swiper-item>
+    <image class="img1" src="{{imgList[6].path}}"></image> 
+  </swiper-item>
+</swiper>
+<view style="margin-top:5px;"></view>
+<!-- <scroll-view class="container" scroll-y="true">
+  <view style="margin-top: 20px;"></view>
+  <view class="card">
+    <text>这里是文字内容，可以输入文本、描述等内容。</text>
+        <image class="img2"></image>
+  </view>
+  <view style="margin-top: 10px;"></view>
+  <view class="card">
+    <text>这里是文字内容，可以输入文本、描述等内容。</text>
+        <image class="img2"></image>
+  </view>
+  <view style="margin-top: 10px;"></view>
+  <view class="card">
+    <text>这里是文字内容，可以输入文本、描述等内容。</text>
+        <image class="img2"></image>  
+  </view>
+  <view style="margin-top: 10px;"></view>
+  <view class="card">
+    <text>这里是文字内容，可以输入文本、描述等内容。</text>
+        <image class="img2"></image>  
+  </view>
+</scroll-view> -->
+<scroll-view class="container" scroll-y="true" style="position: relative; left: -1rpx; top: 0rpx">
+  <view wx:for="{{imgList}}">
+    <view style="margin-top: 10px;"></view>
+    <view class="card" style="width: 690rpx; height: 186rpx; display: flex; box-sizing: border-box">	
+      <textarea class="newstext">{{item.title}}</textarea>
+      <image class="img2" src="{{item.path}}" style="width: 223rpx; height: 150rpx; display: block; box-sizing: border-box"></image>
+    </view>
+  </view>
+</scroll-view>
+
+		<!-- 展示结束 -->
+

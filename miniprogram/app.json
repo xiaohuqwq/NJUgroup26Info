@@ -5,6 +5,29 @@
     "pages/categoryPage/categoryPage",
     "pages/detailPage/detailPage"
   ],
+
+  "tabBar": {
+    "list": [
+    {
+      "pagePath": "pages/home/home",
+      "text": "首页",
+      "iconPath": "/tarBarImages/首页 - 副本.png",
+      "selectedIconPath": "/tarBarImages/首页.png"
+    },
+    {
+      "pagePath": "pages/categoryPage/categoryPage",
+      "text": "分类",
+      "iconPath": "/tarBarImages/分类 - 副本.png",
+      "selectedIconPath": "/tarBarImages/分类.png"
+    },
+    {
+      "pagePath": "pages/mePage/mePage",
+      "text": "我的",
+      "iconPath": "/tarBarImages/我的 - 副本.png",
+      "selectedIconPath": "/tarBarImages/我的.png"
+    }
+  ]
+  },
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
