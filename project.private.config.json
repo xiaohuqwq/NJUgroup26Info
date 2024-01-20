@@ -6,6 +6,26 @@
     "miniprogram": {
       "list": [
         {
+          "name": "pages/detailPage/detailPage",
+          "pathName": "pages/detailPage/detailPage",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/detailPage/detailPage",
+          "pathName": "pages/home/home",
+          "query": "",
+          "launchMode": "default",
+          "scene": null,
+          "partialCompile": {
+            "enabled": false,
+            "pages": [
+              "pages/detailPage/detailPage"
+            ]
+          }
+        },
+        {
           "name": "db guide",
           "pathName": "pages/databaseGuide/databaseGuide",
           "query": ""

@@ -3,7 +3,9 @@
     "pages/home/home",
     "pages/mePage/mePage",
     "pages/categoryPage/categoryPage",
-    "pages/detailPage/detailPage"
+    "pages/detailPage/detailPage",
+    "pages/collectPage/colletPage",
+    "pages/likePage/likePage"
   ],
 
   "tabBar": {

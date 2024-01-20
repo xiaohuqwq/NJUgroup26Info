@@ -1,3 +1,36 @@
 <!--pages/detailPage/detailPage.wxml-->
-<text>pages/detailPage/detailPage.wxml</text>
-<view>{{id}}</view>
+<c_button bindtap="pressLike" wx:if="{{isLike}}">已点赞</c_button>
+<c_button bindtap="pressLike" wx:if="{{!isLike}}">点赞</c_button>
+<c_button bindtap="pressCollect" wx:if="{{isCollect}}">已收藏</c_button>
+<c_button bindtap="pressCollect" wx:if="{{!isCollect}}">收藏</c_button>
+<view>
+  <view>
+    <text class="titleType">{{title}}</text>
+  </view>
+  <view>
+    <text class="itemType"  style="margin-top:32rpx">作者：{{author}}</text>
+  </view>
+</view>
+
+<view>
+  <image src="{{path}}" style="margin-top:32rpx"></image>
+</view>
+
+<block wx:for="{{detail}}" wx:for-item="paragraph">
+  <view>
+    <text class="detailType" style="margin-top:32rpx">
+      {{paragraph}}
+    </text>
+  </view>
+</block>
+
+<view>
+  <text class="itemType">
+    当前分类：{{category}}
+  </text>
+</view>
+
+<view class="itemType">
+  <c_button bindtap="goBack" style="margin-top:32rpx"> 返回上一级 </c_button>
+</view>
+

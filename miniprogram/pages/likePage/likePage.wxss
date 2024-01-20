@@ -1,0 +1,32 @@
+/* pages/home.wxss */
+.img2{
+  align-items: center;
+  /* border:1px solid black; */
+  height: 70%;
+  width: 150px;
+  margin-right: 10px;
+}
+.container{
+  /* border: 1px black; */
+  height: 500px;
+  width: 96%;
+  margin-left: 2%;
+}
+.newstext{
+  width:200px;
+  height:150rpx;
+  display: flex;
+  overflow-wrap: break-all;
+  /* border: 1px solid #ccc; */
+}
+.card{
+display: flex;
+align-items: center;
+width: 96%;
+ margin-left: 2%;
+ height: 260rpx;
+ background: rgb(255, 255, 255);
+ border-radius: 10rpx;
+ box-shadow: 5px 5px 5px #cdcfcf;
+ border: 1px black;
+}

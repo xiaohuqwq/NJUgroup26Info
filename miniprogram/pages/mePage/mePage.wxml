@@ -1,2 +1,12 @@
-<!--pages/mePage/mePage.wxml-->
-<text>pages/mePage/mePage.wxml</text>
+<van-cell
+  is-link
+  title="喜欢"
+  link-type="navigateTo"
+  url="/pages/likePage/likePage"
+/>
+<van-cell
+  is-link
+  title="收藏"
+  link-type="navigateTo"
+  url="/pages/collectPage/collectPage"
+/>

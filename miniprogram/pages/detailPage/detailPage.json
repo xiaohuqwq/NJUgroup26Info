@@ -1,3 +1,8 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "c_button":"/miniprogram_npm/@vant/weapp/button/index",
+    "background":"/miniprogram_npm/@vant/weapp/image/index"
+  },
+  "navigationBarTitleText": "详情"
 }
+

@@ -1,1 +1,43 @@
 /* pages/detailPage/detailPage.wxss */
+.detailType {
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.titleType{
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  display: flex;
+  justify-content: center;
+  font-size: larger;
+}
+
+.itemType{
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  font-size: smaller;
+}
+
+.catType{
+  display: flex;
+  justify-content: left;
+}
+
+.autType{
+  display: flex;
+  justify-content:right;
+}
+
+.goBackType{
+  justify-content:middle;
+}
+
+.imageType{
+  display: flex;
+  justify-content: center;
+}
