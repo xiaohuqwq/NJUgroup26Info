@@ -10,21 +10,21 @@
   <swiper-item>
     <view>
       <navigator url="/pages/detailPage/detailPage?news_id=4">
-        <image class="img1"  style="width: 100%; height: 130px;" src="{{imgList[4].path}}" bind:tap="imagetap"></image> 
+        <image class="img1"  style="width: 100%; height: 150px;" src="{{imgList[4].path}}" bind:tap="imagetap"></image> 
       </navigator>
     </view>
   </swiper-item>
   <swiper-item>
     <view>
       <navigator url="/pages/detailPage/detailPage?news_id=2">
-        <image class="img1"  style="width: 100%; height: 130px;" src="{{imgList[2].path}}" bind:tap="imagetap"></image> 
+        <image class="img1"  style="width: 100%; height: 150px;" src="{{imgList[2].path}}" bind:tap="imagetap"></image> 
       </navigator>
     </view>
   </swiper-item>
   <swiper-item>
     <view>
       <navigator url="/pages/detailPage/detailPage?news_id=6">
-        <image class="img1"  style="width: 100%; height: 130px;" src="{{imgList[6].path}}" bind:tap="imagetap"></image> 
+        <image class="img1"  style="width: 100%; height: 150px;" src="{{imgList[6].path}}" bind:tap="imagetap"></image> 
       </navigator>
     </view>
   </swiper-item>

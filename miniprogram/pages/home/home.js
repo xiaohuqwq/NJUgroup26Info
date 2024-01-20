@@ -3,7 +3,6 @@ const db = wx.cloud.database()
 const datacollection=db.collection("news")
 Page({
   cardtap:function(e){
-    // console.log(e)
     var news_id=e.currentTarget.dataset.news_id;
     wx.navigateTo({
       url: '/pages/detailPage/detailPage?news_id='+news_id,
