@@ -3,5 +3,5 @@
   "enablePullDownRefresh": true,
   "backgroundColor": "#efefef",
   "backgroundTextStyle":"dark",
-  "navigationBarTitleText": "收藏的新闻"
+  "navigationBarTitleText":"作者的新闻"
 }

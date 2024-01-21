@@ -1,12 +1,21 @@
 <van-cell
   is-link
-  title="喜欢"
+  icon="like-o"
+  title="喜欢的新闻"
   link-type="navigateTo"
   url="/pages/likePage/likePage"
 />
 <van-cell
   is-link
-  title="收藏"
+  icon="star-o"
+  title="收藏的新闻"
   link-type="navigateTo"
   url="/pages/collectPage/collectPage"
+/>
+<van-cell
+  is-link
+  icon="friends-o"
+  title="收藏的作者"
+  link-type="navigateTo"
+  url="/pages/likeAuthorPage/likeAuthorPage"
 />

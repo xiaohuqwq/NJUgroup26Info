@@ -1,9 +1,12 @@
 // pages/categoryPage/categoryPage.js
+const db = wx.cloud.database()
+const datacollection=db.collection("news")
 Page({
 
   /**
    * 页面的初始数据
    */
+
   data: {
     yule: '/images/iconImages/yule.svg',
     keji: '/images/iconImages/科技.svg',
@@ -15,15 +18,23 @@ Page({
     caijing:'/images/iconImages/财经.svg',
     shizheng:'/images/iconImages/时政要闻.svg',
     qita:'/images/iconImages/其他.svg',
-  
+    categoryList:[], 
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad(options) {
-
-  },
+  onLoad: function (options) {  // 页面初始化 options为页面跳转所带来的参数
+        let that=this //异步请求，所以let一个that
+       
+        wx.cloud.database().collection("news").limit(10).get({ 
+          success(res){       
+            that.setData({ //通过setData，将res中的数据存入到imgList数组当中
+              imgList:res.data           
+            }); 
+          }
+        })
+    },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -73,9 +84,11 @@ Page({
   onShareAppMessage() {
 
   },
-  goadd() {
+  a:function(e){
+    // console.log(e)
+    var news_category=e.currentTarget.dataset.news_category;
     wx.navigateTo({
-        url: '../index/add',
+    url: '/pages/categoryDetailPage/categoryDetailPage?news_category='+news_category,
     })
 }
 })

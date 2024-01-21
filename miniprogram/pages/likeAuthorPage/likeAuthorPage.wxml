@@ -1,0 +1,14 @@
+<van-cell-group title="收藏的作者" >
+  <view wx:for="{{imgList}}" wx:for-item="item1">
+    <view wx:if="{{item1.category=='likeAuthor'}}">
+      <van-cell
+        wx:for="{{item1.author}}" wx:for-item="item2"
+        is-link
+        icon="friends-o"
+        title="{{item2}}"
+        link-type="navigateTo"
+        url='/pages/likeAuthorNewsPage/likeAuthorNewsPage?author={{item2}}'
+     />
+    </view>
+  </view>
+</van-cell-group>

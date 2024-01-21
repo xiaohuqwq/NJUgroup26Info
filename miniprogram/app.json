@@ -5,7 +5,10 @@
     "pages/categoryPage/categoryPage",
     "pages/detailPage/detailPage",
     "pages/likePage/likePage",
-    "pages/collectPage/collectPage"
+    "pages/collectPage/collectPage",
+    "pages/categoryDetailPage/categoryDetailPage",
+    "pages/likeAuthorPage/likeAuthorPage",
+    "pages/likeAuthorNewsPage/likeAuthorNewsPage"
   ],
 
   "tabBar": {

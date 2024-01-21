@@ -1,43 +1,43 @@
 <!--pages/categoryPage/categoryPage.wxml-->
 <view class='top'>
   <view class='choice'>
-    <button class='btn'>
-      <image src='{{yule}}' style='height:85rpx;width:85rpx' class='icon'></image>
+    <button class='btn' bindtap="a" data-news_category="娱乐">
+      <image src='{{yule}}' style='height:85rpx;width:85rpx;'  class='icon'></image>
       <text class='detail'>娱乐</text>
     </button>
-    <button class='btn'>
-      <image src='{{keji}}' style='height:85rpx;width:85rpx' class="icon"></image>
+    <button class='btn' bindtap="a" data-news_category="科技">
+      <image src='{{keji}}' style='height:85rpx;width:85rpx'  class="icon"></image>
       <text class='detail'>科技</text>
     </button>
-    <button class='btn'>
-      <image src='{{junshi}}' style='height:85rpx;width:85rpx' class="icon"></image>
+    <button class='btn' bindtap="a" data-news_category="军事">
+      <image src='{{junshi}}' style='height:85rpx;width:85rpx'  class="icon"></image>
       <text class='detail'>军事</text>
     </button>
-    <button class='btn'>
-      <image src='{{tiyu}}' style='height:85rpx;width:85rpx' class="icon"></image>
+    <button class='btn' bindtap="a" data-news_category="体育">
+      <image src='{{tiyu}}' style='height:85rpx;width:85rpx'  class="icon"></image>
       <text class='detail'>体育</text>
     </button>
-    <button class='btn'>
-      <image src='{{guoji}}' style='height:85rpx;width:85rpx' class="icon"></image>
+    <button class='btn' bindtap="a" data-news_category="国际">
+      <image src='{{guoji}}' style='height:85rpx;width:85rpx'  class="icon"></image>
       <text class='detail'>国际</text>
     </button>
-    <button class='btn'>
-      <image src='{{youxi}}' style='height:85rpx;width:85rpx' class="icon"></image>
+    <button class='btn' bindtap="a" data-news_category="游戏">
+      <image src='{{youxi}}' style='height:85rpx;width:85rpx'  class="icon"></image>
       <text class='detail'>游戏</text>
     </button>
-    <button class='btn'>
+    <button class='btn' bindtap="a" data-news_category="健康">
       <image src='{{jiankang}}' style='height:85rpx;width:85rpx' class="icon"></image>
       <text class='detail'>健康</text>
     </button>
-    <button class='btn'>
+    <button class='btn' bindtap="a" data-news_category="财经">
       <image src='{{caijing}}' style='height:85rpx;width:85rpx' class="icon"></image>
       <text class='detail'>财经</text>
     </button>
-    <button class='btn'>
+    <button class='btn' bindtap="a" data-news_category="时政">
       <image src='{{shizheng}}' style='height:85rpx;width:85rpx' class="icon"></image>
       <text class='detail'>时政</text>
     </button>
-    <button class='btn'>
+    <button class='btn' bindtap="a" data-news_category="其他">
       <image src='{{qita}}' style='height:85rpx;width:85rpx' class="icon"></image>
       <text class='detail'>其他</text>
     </button>

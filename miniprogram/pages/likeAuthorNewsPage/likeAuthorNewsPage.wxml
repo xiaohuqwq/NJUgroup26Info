@@ -1,0 +1,14 @@
+<view style="margin-top:5px;"></view>
+<scroll-view class="container" scroll-y="true">
+  <view wx:for="{{imgList}}">
+  <view wx:if="{{author == item.author}}">
+    <view style="margin-top: 10px;"></view>
+    <navigator url="'/pages/detailPage/detailPage'">
+        <view class="card" bind:tap="cardtap" data-news_id="{{item._id}}">	
+        <textarea class="newstext" disabled>{{item.title}}</textarea>
+      <image class="img2" src="{{item.path}}"></image>
+    </view>
+    </navigator>
+  </view>
+  </view>
+</scroll-view>
