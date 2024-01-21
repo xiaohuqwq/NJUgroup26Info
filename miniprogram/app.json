@@ -5,7 +5,7 @@
     "pages/categoryPage/categoryPage",
     "pages/detailPage/detailPage",
     "pages/likePage/likePage",
-    "pages/collectPage/colletPage"
+    "pages/collectPage/collectPage"
   ],
 
   "tabBar": {
@@ -13,20 +13,20 @@
     {
       "pagePath": "pages/home/home",
       "text": "首页",
-      "iconPath": "/tarBarImages/首页 - 副本.png",
-      "selectedIconPath": "/tarBarImages/首页.png"
+      "iconPath": "/images/tarBarImages/首页 - 副本.png",
+      "selectedIconPath": "/images/tarBarImages/首页.png"
     },
     {
       "pagePath": "pages/categoryPage/categoryPage",
       "text": "分类",
-      "iconPath": "/tarBarImages/分类 - 副本.png",
-      "selectedIconPath": "/tarBarImages/分类.png"
+      "iconPath": "/images/tarBarImages/分类 - 副本.png",
+      "selectedIconPath": "/images/tarBarImages/分类.png"
     },
     {
       "pagePath": "pages/mePage/mePage",
       "text": "我的",
-      "iconPath": "/tarBarImages/我的 - 副本.png",
-      "selectedIconPath": "/tarBarImages/我的.png"
+      "iconPath": "/images/tarBarImages/我的 - 副本.png",
+      "selectedIconPath": "/images/tarBarImages/我的.png"
     }
   ]
   },
@@ -34,7 +34,7 @@
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTitleText": "NJU新闻站",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",

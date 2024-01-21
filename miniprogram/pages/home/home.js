@@ -14,7 +14,7 @@ Page({
   	onLoad: function (options) {  // 页面初始化 options为页面跳转所带来的参数
     let that=this //异步请求，所以let一个that
    
-    wx.cloud.database().collection("news").get({ 
+    wx.cloud.database().collection("news").limit(10).get({ 
       success(res){       
         that.setData({ //通过setData，将res中的数据存入到imgList数组当中
           imgList:res.data           

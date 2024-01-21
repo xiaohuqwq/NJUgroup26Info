@@ -1,2 +1,45 @@
 <!--pages/categoryPage/categoryPage.wxml-->
-<text>pages/categoryPage/categoryPage.wxml</text>
+<view class='top'>
+  <view class='choice'>
+    <button class='btn'>
+      <image src='{{yule}}' style='height:85rpx;width:85rpx' class='icon'></image>
+      <text class='detail'>娱乐</text>
+    </button>
+    <button class='btn'>
+      <image src='{{keji}}' style='height:85rpx;width:85rpx' class="icon"></image>
+      <text class='detail'>科技</text>
+    </button>
+    <button class='btn'>
+      <image src='{{junshi}}' style='height:85rpx;width:85rpx' class="icon"></image>
+      <text class='detail'>军事</text>
+    </button>
+    <button class='btn'>
+      <image src='{{tiyu}}' style='height:85rpx;width:85rpx' class="icon"></image>
+      <text class='detail'>体育</text>
+    </button>
+    <button class='btn'>
+      <image src='{{guoji}}' style='height:85rpx;width:85rpx' class="icon"></image>
+      <text class='detail'>国际</text>
+    </button>
+    <button class='btn'>
+      <image src='{{youxi}}' style='height:85rpx;width:85rpx' class="icon"></image>
+      <text class='detail'>游戏</text>
+    </button>
+    <button class='btn'>
+      <image src='{{jiankang}}' style='height:85rpx;width:85rpx' class="icon"></image>
+      <text class='detail'>健康</text>
+    </button>
+    <button class='btn'>
+      <image src='{{caijing}}' style='height:85rpx;width:85rpx' class="icon"></image>
+      <text class='detail'>财经</text>
+    </button>
+    <button class='btn'>
+      <image src='{{shizheng}}' style='height:85rpx;width:85rpx' class="icon"></image>
+      <text class='detail'>时政</text>
+    </button>
+    <button class='btn'>
+      <image src='{{qita}}' style='height:85rpx;width:85rpx' class="icon"></image>
+      <text class='detail'>其他</text>
+    </button>
+  </view>
+</view>

@@ -5,7 +5,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    yule: '/images/iconImages/yule.svg',
+    keji: '/images/iconImages/科技.svg',
+    junshi:'/images/iconImages/军事.svg',
+    tiyu:'/images/iconImages/体育.svg',
+    guoji:'/images/iconImages/国际.svg',
+    youxi:'/images/iconImages/游戏.svg',
+    jiankang:'/images/iconImages/健康.svg',
+    caijing:'/images/iconImages/财经.svg',
+    shizheng:'/images/iconImages/时政要闻.svg',
+    qita:'/images/iconImages/其他.svg',
+  
   },
 
   /**
@@ -62,5 +72,10 @@ Page({
    */
   onShareAppMessage() {
 
-  }
+  },
+  goadd() {
+    wx.navigateTo({
+        url: '../index/add',
+    })
+}
 })
