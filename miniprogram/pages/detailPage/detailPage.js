@@ -1,39 +1,37 @@
 // pages/detailPage/detailPage.js
-
 const db = wx.cloud.database()
 const datacollection=db.collection("news")
+var isSubscribe=false
 Page({ 
-
   /**
    * 页面的初始数据
    */
   data: {
-    news_id:'',
+    news_id:"99",
     author:"null",
     category:"null",
     time:null,
     detail:[],
     title:"",
-    isCollect:false,
-    isLike:false,
+    isCollect:true,
+    isLike:true,
     path:"",
+    meId:"",
+    tmpAu:[],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad(options) {
+  onLoad:function(options) {
     this.setData({
       news_id:options.news_id
     })
-    // console.log(options)
-    // console.log(this.data.news_id)
 
     let that=this //异步请求，所以let一个that
 
     datacollection.doc(this.data.news_id).get({
       success(res){
-        console.log(res.data)
         that.setData({
           author:res.data.author,
           category:res.data.category,
@@ -46,7 +44,24 @@ Page({
         })
       }
     })
-    
+
+    console.log(this.data)
+    this.setData({
+      author:that.data.author
+    })
+    console.log(this.data)
+
+    db.collection("meInfo").where({
+      category:"likeAuthor"
+    }).get().then(res=>{
+      console.log(res)
+      that.setData({
+        meId:res.data[0]._id,
+        isSubscribe:(res.data[0].author.indexOf(that.data.author)!=-1),
+        tmpAu:res.data[0].author
+      })
+    })
+    console.log(this.data)
   },
 
   /**
@@ -60,7 +75,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
+   
   },
 
   /**
@@ -118,14 +133,6 @@ Page({
       }
     })
     console.log(this.data)
-
-    db.collection("meInfo").where({
-      category:'likeAuthor'
-    }).get({
-      success(res){
-        console.log(res.data[0])
-      }
-    })
   },
 
   pressCollect()
@@ -138,11 +145,42 @@ Page({
       data: {
         isCollect:this.data.isCollect
       },
-      success: function(tmp) {
-        console.log(tmp.data)
+      success: function(res) {
+        console.log(res.data)
       }
     })
     console.log(this.data)
   },
 
+  Subscribe()
+  {
+    this.setData({
+      isSubscribe:!this.data.isSubscribe
+    })
+    var tmpA=this.data.tmpAu
+    tmpA.push(this.data.author)
+    console.log(tmpA)
+    db.collection("meInfo").doc(this.data.meId).update({
+      // data 传入需要局部更新的数据
+      data: {
+        author:tmpA
+      },
+    })
+  },
+
+  cancelSubscribe(){
+    this.setData({
+      isSubscribe:!this.data.isSubscribe
+    })
+    var tmpA=this.data.tmpAu
+    tmpA.splice(tmpA.indexOf(this.data.author),1)
+    console.log(tmpA)
+    db.collection("meInfo").doc(this.data.meId).update({
+      // data 传入需要局部更新的数据
+      data: {
+        author:tmpA
+      },
+    })
+  }
+  
 })

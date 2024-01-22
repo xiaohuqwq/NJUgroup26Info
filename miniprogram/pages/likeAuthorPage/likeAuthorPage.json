@@ -4,5 +4,5 @@
     "van-cell":"/miniprogram_npm/@vant/weapp/cell/index",
     "van-cell-group":"/miniprogram_npm/@vant/weapp/cell-group/index"
   },
-  "navigationBarTitleText": "收藏的作者"
+  "navigationBarTitleText": "关注的作者"
 }

@@ -1,4 +1,4 @@
-<van-cell-group title="收藏的作者" >
+<van-cell-group title="关注的作者" >
   <view wx:for="{{imgList}}" wx:for-item="item1">
     <view wx:if="{{item1.category=='likeAuthor'}}">
       <van-cell

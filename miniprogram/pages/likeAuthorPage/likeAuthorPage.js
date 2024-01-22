@@ -34,7 +34,16 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
+    let that=this //异步请求，所以let一个that
+   
+    wx.cloud.database().collection("meInfo").limit(10).get({ 
+      success(res){       
+        that.setData({ //通过setData，将res中的数据存入到imgList数组当中
+          imgList:res.data           
+        }),
+        console.log(imgList.data)   ///打印看一下   
+      }
+    })
   },
 
   /**

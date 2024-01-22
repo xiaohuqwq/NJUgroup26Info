@@ -38,6 +38,5 @@
 }
 
 .imageType{
-  display: flex;
-  justify-content: center;
+  justify-content:middle;
 }

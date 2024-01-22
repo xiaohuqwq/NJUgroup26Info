@@ -1,28 +1,33 @@
 <!--pages/detailPage/detailPage.wxml-->
-<c_button bindtap="pressLike" wx:if="{{isLike}}">已点赞</c_button>
-<c_button bindtap="pressLike" wx:if="{{!isLike}}">点赞</c_button>
-<c_button bindtap="pressCollect" wx:if="{{isCollect}}">已收藏</c_button>
-<c_button bindtap="pressCollect" wx:if="{{!isCollect}}">收藏</c_button>
+<view>
+  <c_button bindtap="pressLike" wx:if="{{isLike}}">已点赞
+  </c_button>
+  <c_button bindtap="pressLike" wx:if="{{!isLike}}">点赞
+  </c_button>
+  <c_button bindtap="pressCollect" wx:if="{{isCollect}}">已收藏</c_button>
+  <c_button bindtap="pressCollect" wx:if="{{!isCollect}}">收藏</c_button>
+</view>
+
 <view>
   <view>
     <text class="titleType">{{title}}</text>
   </view>
-  <view>
+  <view class="imageType">
     <text class="itemType"  style="margin-top:32rpx">作者：{{author}}</text>
+    <c_button bindtap="cancelSubscribe" wx:if="{{isSubscribe}}">已关注</c_button>
+    <c_button bindtap="Subscribe" wx:if="{{!isSubscribe}}">关注</c_button>
   </view>
 </view>
 
 <view>
-  <image src="{{path}}" style="margin-top:32rpx"></image>
+  <image src="{{path}}" mode="widthFix" class="imageType"></image>
 </view>
 
-<block wx:for="{{detail}}" wx:for-item="paragraph">
-  <view>
-    <text class="detailType" style="margin-top:32rpx">
-      {{paragraph}}
-    </text>
-  </view>
-</block>
+<view wx:for="{{detail}}" wx:for-item="paragraph">
+  <text class="detailType" style="margin-top:32rpx">
+    {{paragraph}}
+  </text>
+</view>
 
 <view>
   <text class="itemType">

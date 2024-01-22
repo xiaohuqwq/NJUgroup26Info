@@ -15,7 +15,7 @@
 <van-cell
   is-link
   icon="friends-o"
-  title="收藏的作者"
+  title="关注的作者"
   link-type="navigateTo"
   url="/pages/likeAuthorPage/likeAuthorPage"
 />

@@ -5,15 +5,23 @@
 .img1{
   /* border:1px solid black; */
   height: 100%;
-  width: 100%;
-  align-items: center;
+  margin-left: 1%;
+  margin-right: 1%;
+  border-radius: 10rpx;
 }
-.img2{
-  align-items: center;
-  /* border:1px solid black; */
-  height: 70%;
-  width: 80px;
-  margin-right: 5px;
+.title{
+  width: 650rpx;
+  position: relative;
+  z-index: 99;
+  text-align: left;
+  font-weight: 550;
+  font-size: 24rpx;
+  left: 35rpx;
+  bottom: 80rpx;
+  white-space:nowrap;
+  color: #ffffff;
+  text-overflow:ellipsis;
+  overflow:hidden
 }
 .container{
   /* border: 1px black; */
@@ -21,21 +29,42 @@
   width: 96%;
   margin-left: 2%;
 }
-.newstext{
-  width:200px;
-  height:150rpx;
-  display: flex;
-  overflow-wrap: break-all;
-  /* border: 1px solid #ccc; */
-}
 .card{
-display: flex;
-align-items: center;
-width: 96%;
- margin-left: 2%;
- height: 260rpx;
- background: rgb(255, 255, 255);
- border-radius: 10rpx;
- box-shadow: 5px 5px 5px #cdcfcf;
- border: 1px black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 96%;
+  margin-left: 2%;
+  height: 260rpx;
+  background: rgb(255, 255, 255);
+  border-radius: 10rpx;
+  box-shadow: 10rpx 10rpx 10rpx #cdcfcf;
+  border: 2rpx black;
+  }  
+.title-info {
+  width: 200rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 32rpx;
+}
+.newstext{
+  width: 400rpx;
+  overflow-wrap: break-all;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 80rpx;
+}
+.infotext{
+  /* height:10rpx; */
+  border: 1px black;
+  font-size: 14px;
+  color: #999999;
+  overflow-wrap: break-all;
+  margin-top: 5rpx;
+}
+.img2{
+  height: 80%;
+  width: 200rpx;
+  margin-right: 10rpx;
 }
