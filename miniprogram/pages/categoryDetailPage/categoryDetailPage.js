@@ -1,20 +1,67 @@
-// pages/categoryDetailPage/categoryDetailPage.js
+const db = wx.cloud.database()
+const datacollection=db.collection("news")
 Page({
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
-
+  cardtap:function(e){
+    var news_id=e.currentTarget.dataset.news_id,
+    news_author=e.currentTarget.dataset.news_author;
+    wx.navigateTo({
+      url: '/pages/detailPage/detailPage?news_id='+news_id+'&news_author='+news_author,
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad(options) {
-
-  },
-
+	data: {
+    imgList:[],		///定一个接受数据的数组
+    author:'',
+    pagesize:20,
+    pagestart:0,
+    page:1,
+    category:''
+    },
+    
+    onLoad: function (options) {  // 页面初始化 options为页面跳转所带来的参数
+      console.log(options)
+      let that=this //异步请求，所以let一个that
+    that.setData({
+      author:options.news_category,
+      category:options.news_category
+    }),
+    wx.showLoading({
+      title: '少女祈祷中',
+     })
+    wx.cloud.database().collection("news").get({ 
+      success(res){    
+        let list = res.data.concat(that.data.imgList)     
+        that.setData({ //通过setData，将res中的数据存入到imgList数组当中
+          imgList:list        
+        });
+      },
+      complete(){
+        wx.hideLoading();
+      }
+    })
+    this.setData({
+      pagestart: this.data.pagestart+20,
+    })
+    // console.log(this.data)
+    wx.cloud.database().collection("news").skip(that.data.pagestart).limit(2).get({ 
+      success(res){  
+        // console.log(res)
+        let list = res.data.concat(that.data.imgList)      
+        that.setData({ 
+          imgList:list          
+        });
+       // console.log("OK")
+      },
+      complete(){
+        wx.hideLoading();
+      },
+    })
+    this.setData({
+      pagestart: this.data.pagestart+2,
+    })
+     console.log(this.data)
+},
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -26,7 +73,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
+    
   },
 
   /**
@@ -53,8 +100,34 @@ Page({
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom() {
-
+  onReachBottom: function(){
+    if(this.data.pagestart>=126){
+      return wx.showToast({
+        title: '已全部加载完毕',
+        icon:"none"
+      })
+    }
+    wx.showLoading({
+      title: '少女祈祷中',
+    })
+      let that=this 
+    this.setData({
+      pagestart: this.data.pagestart+20,
+    })
+    // 异步请求，所以let一个that
+    wx.cloud.database().collection("news").skip(that.data.pagestart).limit(that.data.pagesize).get({ 
+      success(res){  
+        console.log(res)
+        let list = that.data.imgList.concat(res.data)     
+        that.setData({ 
+          imgList:list          
+        });
+        console.log("OK")
+      },
+      complete(){
+        wx.hideLoading();
+      },
+    })
   },
 
   /**

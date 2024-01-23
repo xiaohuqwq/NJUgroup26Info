@@ -1,2 +1,14 @@
-<!--pages/categoryDetailPage/categoryDetailPage.wxml-->
-<text>pages/categoryDetailPage/categoryDetailPage.wxml</text>
+<view wx:for="{{imgList}}">
+  <view wx:if="{{item.category== author}}">
+    <view style="margin-top: 10px;"></view>
+    <navigator url="'/pages/detailPage/detailPage'">
+      <view class="card" bind:tap="cardtap" data-news_id="{{item._id}}" data-news_author="{{item.author}}">
+        <view class="title-info">
+          <textarea class="newstext" disabled style="position: relative; left: 0rpx; top: 289rpx">{{item.title}}</textarea>
+          <textarea class="infotext" disabled>{{item.author}} {{item.time}}</textarea>
+        </view>	
+        <image class="img2" src="{{item.path}}" style="width: 200rpx; height: 167rpx; display: block; box-sizing: border-box"></image>
+      </view>
+    </navigator>
+  </view>
+</view>

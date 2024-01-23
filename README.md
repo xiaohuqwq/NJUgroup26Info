@@ -25,32 +25,43 @@ NJU互联网计算课程26组大作业
 
 包含每日推荐的轮播图和所有新闻展示的卡片，点击即可跳转到新闻详情界面。
 
-
+<img src="README.assets/image-20240123184629639.png" alt="image-20240123184629639" style="zoom: 50%;" />
 
 **新闻分类：**
 
 放置了新闻分类的按钮，点击跳转到所有该分类的新闻展示。
 
-
+<img src="README.assets/image-20240123184654493.png" alt="image-20240123184654493" style="zoom: 50%;" />
 
 **新闻详情：**
 
 展示新闻详细内容，包括关注，喜欢和收藏功能。
 
-
+<img src="README.assets/image-20240123184713200.png" alt="image-20240123184713200" style="zoom:50%;" />
 
 **我的功能：**
 
 展示我喜欢的新闻，收藏的新闻和关注的作者。
 
-
+<img src="README.assets/image-20240123184728601.png" alt="image-20240123184728601" style="zoom:50%;" />
 
 ## 三、技术实现
 
-
-
 - 使用了基本的微信开发端开发技术，借助微信官方文档进行小程序开发
+
+<img src="README.assets/image-20240123185152745.png" alt="image-20240123185152745" style="zoom:50%;" />
+
 - 使用了底部导航栏
+
+![image-20240123184834332](README.assets/image-20240123184834332.png)
+
 - 使用了 vant-wapp 框架进行开发
 - 使用了微信开发工具的云开发技术包括其中的云数据库和云储存的功能
+
+<img src="README.assets/image-20240123184912283.png" alt="image-20240123184912283" style="zoom: 33%;" />
+
 - 数据存在云数据库中，通过 `wx.cloud.database()` 等进行调用
+
+<img src="README.assets/image-20240123184819578.png" alt="image-20240123184819578" style="zoom:50%;" />
+
+- 小组几人合理分工，共同合作完成

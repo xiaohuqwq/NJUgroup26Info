@@ -37,9 +37,9 @@
       <image src='{{shizheng}}' style='height:85rpx;width:85rpx' class="icon"></image>
       <text class='detail'>时政</text>
     </button>
-    <button class='btn' bindtap="a" data-news_category="其他">
+    <button class='btn' bindtap="a" data-news_category="其它">
       <image src='{{qita}}' style='height:85rpx;width:85rpx' class="icon"></image>
-      <text class='detail'>其他</text>
+      <text class='detail'>其它</text>
     </button>
   </view>
 </view>

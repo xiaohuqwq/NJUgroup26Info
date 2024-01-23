@@ -26,7 +26,8 @@ Page({
     wx.cloud.database().collection("news").skip(this.data.pagestart).limit(this.data.pagesize).where({
       author:this.data.author
     }).get({ 
-      success(res){       
+      success(res){
+        console.log(res)       
         let list = that.data.imgList.concat(res.data)     
         that.setData({ //通过setData，将res中的数据存入到imgList数组当中
           imgList:list        
@@ -87,7 +88,7 @@ Page({
     })
       let that=this 
     this.setData({
-      pagestart: this.data.pagestart+7,
+      pagestart: this.data.pagestart + 20,
     })
     // 异步请求，所以let一个that
     wx.cloud.database().collection("news").skip(that.data.pagestart).limit(that.data.pagesize).get({ 
