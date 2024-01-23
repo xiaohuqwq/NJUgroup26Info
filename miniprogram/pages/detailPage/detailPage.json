@@ -1,7 +1,7 @@
 {
   "usingComponents": {
-    "c_button":"/miniprogram_npm/@vant/weapp/button/index",
-    "van-button": "/miniprogram_npm/@vant/weapp/button/index"
+    "van-button":"/miniprogram_npm/@vant/weapp/button/index",
+    "van-cell":"/miniprogram_npm/@vant/weapp/cell/index"
   },
   "navigationBarTitleText": "新闻详情"
 }

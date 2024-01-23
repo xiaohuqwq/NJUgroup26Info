@@ -2,29 +2,38 @@ const db = wx.cloud.database()
 const datacollection=db.collection("news")
 Page({
   cardtap:function(e){
-    // console.log(e)
-    var news_id=e.currentTarget.dataset.news_id;
+    var news_id=e.currentTarget.dataset.news_id,
+    news_author=e.currentTarget.dataset.news_author;
     wx.navigateTo({
-      url: '/pages/detailPage/detailPage?news_id='+news_id,
+      url: '/pages/detailPage/detailPage?news_id='+news_id+'&news_author='+news_author,
     })
   },
 	data: {
     imgList:[],		///定一个接受数据的数组
-    author:''
+    author:'',
+    pagesize:7,
+    pagestart:0,
+    page:1
   	},
     onLoad: function (options) {  // 页面初始化 options为页面跳转所带来的参数
     let that=this //异步请求，所以let一个that
     that.setData({
       author:options.author
     }),
-    wx.cloud.database().collection("news").where({
+    wx.showLoading({
+      title: '少女祈祷中',
+     })
+    wx.cloud.database().collection("news").skip(this.data.pagestart).limit(this.data.pagesize).where({
       author:this.data.author
     }).get({ 
       success(res){       
+        let list = that.data.imgList.concat(res.data)     
         that.setData({ //通过setData，将res中的数据存入到imgList数组当中
-          imgList:res.data           
-        }),
-        console.log(imgList.data)   ///打印看一下   
+          imgList:list        
+        });
+      },
+      complete(){
+        wx.hideLoading();
       }
     })
 },
@@ -66,8 +75,33 @@ Page({
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom() {
-
+  onReachBottom: function(){
+    if(this.data.pagestart>=126){
+      return wx.showToast({
+        title: '已全部加载完毕',
+        icon:"none"
+      })
+    }
+    wx.showLoading({
+      title: '少女祈祷中',
+    })
+      let that=this 
+    this.setData({
+      pagestart: this.data.pagestart+7,
+    })
+    // 异步请求，所以let一个that
+    wx.cloud.database().collection("news").skip(that.data.pagestart).limit(that.data.pagesize).get({ 
+      success(res){  
+        let list = that.data.imgList.concat(res.data)     
+        that.setData({ 
+          imgList:list          
+        });
+        console.log("OK")
+      },
+      complete(){
+        wx.hideLoading();
+      },
+    })
   },
 
   /**

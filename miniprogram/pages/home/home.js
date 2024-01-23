@@ -2,9 +2,10 @@ const db = wx.cloud.database()
 const datacollection=db.collection("news")
 Page({
   cardtap:function(e){
-    var news_id=e.currentTarget.dataset.news_id;
+    var news_id=e.currentTarget.dataset.news_id,
+    news_author=e.currentTarget.dataset.news_author;
     wx.navigateTo({
-      url: '/pages/detailPage/detailPage?news_id='+news_id,
+      url: '/pages/detailPage/detailPage?news_id='+news_id+'&news_author='+news_author,
     })
   },
 	data: {

@@ -1,6 +1,6 @@
 <!--pages/categoryPage/categoryPage.wxml-->
 <view class='top'>
-  <view class='choice'>
+  <view class='choice' style="width: 750rpx; height: 1069rpx; display: flex; box-sizing: border-box">
     <button class='btn' bindtap="a" data-news_category="娱乐">
       <image src='{{yule}}' style='height:85rpx;width:85rpx;'  class='icon'></image>
       <text class='detail'>娱乐</text>

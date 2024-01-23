@@ -2,32 +2,32 @@
 <swiper class="Daily-recommendations" indicator-dots circular indicator-active-color="gray">
   <swiper-item>
     <view>
-      <navigator url="/pages/detailPage/detailPage?news_id=01">
-        <image class="img1"  style="width: 736rpx; height: 352rpx; display: flex; box-sizing: border-box" src="{{imgList[0].path}}" bind:tap="imagetap"></image> 
+      <navigator url="/pages/detailPage/detailPage?news_id=01&news_author=生命科技">
+        <image class="img1"  style="width: 98%; height: 352rpx;" src="{{imgList[0].path}}" bind:tap="imagetap"></image> 
         <textarea class="title">{{imgList[0].title}}</textarea>
       </navigator>
     </view>
   </swiper-item>
   <swiper-item>
     <view>
-      <navigator url="/pages/detailPage/detailPage?news_id=05">
-        <image class="img1"  style="width: 736rpx; height: 352rpx; display: flex; box-sizing: border-box" src="{{imgList[4].path}}" bind:tap="imagetap"></image>  
+      <navigator url="/pages/detailPage/detailPage?news_id=05&news_author=大国外交">
+        <image class="img1"  style="width: 98%; height: 352rpx;" src="{{imgList[4].path}}" bind:tap="imagetap"></image> 
         <textarea class="title">{{imgList[4].title}}</textarea>
       </navigator>
     </view>
   </swiper-item>
   <swiper-item>
     <view>
-      <navigator url="/pages/detailPage/detailPage?news_id=03">
-        <image class="img1"  style="width: 736rpx; height: 352rpx; display: flex; box-sizing: border-box" src="{{imgList[2].path}}" bind:tap="imagetap"></image> 
+      <navigator url="/pages/detailPage/detailPage?news_id=03&news_author=中国政库">
+        <image class="img1"  style="width: 98%; height: 352rpx;" src="{{imgList[2].path}}" bind:tap="imagetap"></image>
         <textarea class="title">{{imgList[2].title}}</textarea> 
       </navigator>
     </view>
   </swiper-item>
   <swiper-item>
     <view>
-      <navigator url="/pages/detailPage/detailPage?news_id=06">
-        <image class="img1"  style="width: 736rpx; height: 352rpx; display: flex; box-sizing: border-box" src="{{imgList[5].path}}" bind:tap="imagetap"></image>  
+      <navigator url="/pages/detailPage/detailPage?news_id=06&news_author=运动家">
+        <image class="img1"  style="width: 98%; height: 352rpx;" src="{{imgList[5].path}}" bind:tap="imagetap"></image> 
         <textarea class="title">{{imgList[5].title}}</textarea>
       </navigator>
     </view>
@@ -35,16 +35,15 @@
 </swiper>
 <view style="margin-top:10px;"></view>
 <!-- <scroll-view class="container" scroll-y="true"> -->
-
   <view wx:for="{{imgList}}">
     <view style="margin-top: 10px;"></view>
     <navigator url="'/pages/detailPage/detailPage'">
-      <view class="card" bind:tap="cardtap" data-news_id="{{item._id}}">
+      <view class="card" bind:tap="cardtap" data-news_id="{{item._id}}" data-news_author="{{item.author}}">
         <view class="title-info">
-          <textarea class="newstext" disabled style="position: relative; left: 0rpx; top: 289rpx">{{item.title}}</textarea>
+          <textarea class="newstext" disabled style="position: relative; left: 0rpx; top: 291rpx">{{item.title}}</textarea>
           <textarea class="infotext" disabled>{{item.author}} {{item.time}}</textarea>
         </view>	
-        <image class="img2" src="{{item.path}}" style="width: 200rpx; height: 167rpx; display: block; box-sizing: border-box"></image>
+        <image class="img2" src="{{item.path}}" style="width: 261rpx; height: 207rpx; display: block; box-sizing: border-box"></image>
       </view>
     </navigator>
   </view>
